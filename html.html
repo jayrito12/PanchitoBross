@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panchito Bross</title>
+    <!-- Vincular el archivo CSS -->
+    <link rel="stylesheet" href="css.css">
+
+</head>
+
+<script>
+    // URL de la foto de Pancho
+    const panchoImageURL = "https://static.wixstatic.com/media/de7ae8_ab1974ebd7e941078efdeee5b2c27f79~mv2.png/v1/fill/w_480,h_480,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/de7ae8_ab1974ebd7e941078efdeee5b2c27f79~mv2.png";
+
+    // Función para crear una imagen que cae
+    function createFallingImage() {
+        const img = document.createElement('img');
+        img.src = panchoImageURL;
+        img.classList.add('falling-image');
+
+        // Posición horizontal aleatoria
+        img.style.left = Math.random() * 100 + "vw";
+
+        // Duración de la animación aleatoria
+        img.style.animationDuration = Math.random() * 3 + 4 + "s"; // Entre 4 y 7 segundos
+
+        document.body.appendChild(img);
+
+        // Eliminar la imagen del DOM cuando termine la animación
+        setTimeout(() => {
+            img.remove();
+        }, 5000); // La animación dura 5 segundos
+    }
+
+    // Crear imágenes repetidamente cada 500ms
+    setInterval(createFallingImage, 500);
+</script>
+
+
+<body>
+    <h1> <span>P</span><span>A</span><span>N</span><span>C</span><span>H</span><span>I</span><span>T</span><span>O</span>
+        <span>B</span><span>R</span><span>O</span><span>S</span>
+    </h1>
+    <hr />
+    <h2><span>B</span><span>I</span><span>O</span><span>G</span><span>R</span><span>A</span><span>F</span><span>Í</span><span>A</span>
+    </h2>
+    <p>Francisco Javier Edeza Urias nació en la ciudad de Guamúchil, Sinaloa, un lugar conocido por su calidez y su rica
+        cultura. Es el menor de tres hermanos, con un hermano y una hermana mayores que él, quienes han sido una parte
+        importante de su vida y lo han acompañado en su crecimiento personal. Desde pequeño, Francisco se ha distinguido
+        por su espíritu amigable y sociable, disfrutando de la compañía de su familia y amigos, con quienes comparte
+        momentos de alegría y celebración.<br>
+        A lo largo de su vida, ha aprendido a valorar la importancia de las relaciones personales, disfrutando
+        especialmente de las reuniones con amigos, donde el buen humor y las charlas profundas nunca faltan. Con
+        frecuencia, estas reuniones están acompañadas de una copa de alcohol, que para él simboliza un momento de
+        relajación y camaradería. Para Francisco, la amistad es un pilar fundamental, y siempre encuentra tiempo para
+        mantener viva esa conexión con las personas cercanas a él.<br>
+        Actualmente, con 21 años, Francisco está en una etapa decisiva de su vida académica. Estudia en la Universidad
+        Politécnica del Valle del Évora, una institución donde ha encontrado el espacio perfecto para desarrollar sus
+        habilidades y prepararse para los desafíos del futuro. A lo largo de su carrera universitaria, ha demostrado ser
+        un estudiante comprometido con su formación, buscando no solo el conocimiento académico, sino también la
+        aplicación práctica de lo aprendido para contribuir al desarrollo de su comunidad y a su crecimiento
+        profesional.<br>
+        A pesar de las responsabilidades que conlleva ser un universitario, Francisco siempre se esfuerza por mantener
+        un equilibrio entre sus estudios y su vida personal. La convivencia con sus amigos y el tiempo en familia siguen
+        siendo aspectos clave en su vida, y siempre encuentra el momento para disfrutar de ambos. Su carácter jovial,
+        optimista y amigable lo convierte en una persona con la que es fácil conectar y compartir experiencias.<br>
+        Con un futuro lleno de posibilidades por delante, Francisco Javier Edeza Urias se proyecta como una persona con
+        grandes aspiraciones, tanto en lo personal como en lo profesional. Sus raíces en Guamúchil, el apoyo de su
+        familia, y las vivencias que ha compartido con sus amigos son las bases que lo impulsan a seguir adelante,
+        siempre con la vista puesta en alcanzar sus metas y contribuir al bienestar de quienes lo rodean.</p>
+
+    <hr />
+
+    <h2> <span>A</span><span>T</span><span>R</span><span>I</span><span>B</span><span>U</span><span>T</span><span>O</span><span>S</span>
+    </h2>
+
+    <ul>
+        <li>Le apesta el fundio</li>
+        <li>Alto</li>
+        <li>Incrédulo</li>
+        <li>Estúpido a veces</li>
+        <li>Mandilón a la verga</li>
+        <li>Le vuelve a apestar el fundio de más</li>
+    </ul>
+    <hr />
+    <h2><span>D</span><span>E</span><span>S</span><span>C</span><span>R</span><span>I</span><span>P</span><span>C</span><span>I</span><span>Ó</span><span>N</span>
+    </h2>
+    <p>
+        Pancho (Francisco) es un muchacho muy alegre que se la pasa muy feliz en conjunto de sus amigos más cercanos. Le
+        gusta ir mucho a la playa a beber algunas cervezas muy frías, pero su mayor miedo es que Macucho (su amigo) no
+        vaya con él.
+    </p>
+    <hr />
+    <h2><span>S</span><span>O</span><span>B</span><span>R</span><span>E</span> <span>É</span><span>L</span></h2>
+    <ul>
+        <li><a target="_blank" href="https://avatars.githubusercontent.com/u/137015241?v=4">Ir a Foto de Panchito</a>
+        </li>
+        <li><a target="_blank"
+                href="https://www.youtube.com/watch?v=rboU245d86M&list=PL1wFTAmR41Io4UYAa4bT3WhT7VC6F9LBs">Ir a Su serie
+                favorita</a></li>
+        <li><a target="_blank"
+                href="https://super.walmart.com.mx/ip/cerveza-clara-pacifico-6-latas-355-ml-c-u/00750106419961">Ir a
+                Comprar su Cerveza Favorita</a></li>
+        <li><a target="_blank" href="https://contacts.google.com/210110039@upve.edu.mx">Ir a email</a></li>
+    </ul>
+
+    <hr />
+    <h2><span>M</span><span>U</span><span>S</span><span>I</span><span>C</span><span>A</span>
+        <span>F</span><span>A</span><span>V</span><span>O</span><span>R</span><span>I</span><span>T</span><span>A</span>
+    </h2>
+    <ul class="player-list">
+        <li>
+            <h3>Hollywood-Peso Pluma
+            </h3>
+            <audio controls>
+                <source src="Downloads/Hollywood.mp3" type="audio/mp3">
+
+            </audio>
+        </li>
+        <li>
+            <h3>Bruce Wayne-Peso Pluma</h3>
+            <audio controls>
+                <source src="Downloads/Bruce Wayne.mp3" type="audio/mp3">
+
+            </audio>
+        </li>
+        <li>
+            <h3>La Patrulla-Peso Pluma</h3>
+            <audio controls>
+                <source src="Downloads/La Patrulla.mp3" type="audio/mp3">
+
+            </audio>
+        </li>
+    </ul>
+    <!-- Contenedor de rayos -->
+    <div class="rayos">
+        <div class="rayo"></div>
+        <div class="rayo"></div>
+        <div class="rayo"></div>
+        <div class="rayo"></div>
+        <div class="rayo"></div>
+    </div>
+</body>
+
+</html>

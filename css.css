@@ -1,0 +1,318 @@
+    /* Estilos generales */
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        background-image: url("https://get.wallhere.com/photo/illustration-video-games-Super-Mario-Bros-gritty-screenshot-computer-wallpaper-pc-game-1600x1215-px-714431.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+    /* Rayos azules oscuros en movimiento */
+
+    .rayos {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 0;
+        /* Debajo del contenido */
+        pointer-events: none;
+        /* Para que no interfiera con clics u otros elementos */
+    }
+
+    .rayo {
+        position: absolute;
+        width: 10px;
+        height: 1%;
+        background: linear-gradient(to bottom, rgba(2, 66, 151, 0.8), rgba(0, 0, 139, 0.2));
+        animation: moverRayo 2s infinite linear;
+        opacity: 1000;
+    }
+
+    /* Animación del movimiento de los rayos */
+    @keyframes moverRayo {
+        0% {
+            transform: translateY(-100%);
+        }
+
+        100% {
+            transform: translateY(100vh);
+        }
+    }
+
+    /* Creando múltiples rayos */
+
+    .rayo:nth-child(1) {
+        left: 10%;
+        animation-duration: 2.5s;
+    }
+
+    .rayo:nth-child(2) {
+        left: 30%;
+        animation-duration: 2s;
+    }
+
+    .rayo:nth-child(3) {
+        left: 50%;
+        animation-duration: 1.8s;
+    }
+
+    .rayo:nth-child(4) {
+        left: 70%;
+        animation-duration: 2.3s;
+    }
+
+    .rayo:nth-child(5) {
+        left: 90%;
+        animation-duration: 2s;
+    }
+
+
+    h1,
+    h2,
+    p,
+    ul {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Animación de parpadeo para h1 */
+    @keyframes parpadeo-h1 {
+
+        0%,
+        100% {
+            color: rgb(242, 0, 0);
+            /* Color inicial del h1 */
+        }
+
+        50% {
+            color: white;
+            /* Color blanco al parpadear */
+        }
+    }
+
+    /* Estilo del h1 con parpadeo disparejo */
+    h1 {
+        text-align: center;
+        font-size: 3em;
+        font-family: 'Arial', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-family: 'Press Start 2P', cursive;
+    }
+
+    h1 span:nth-child(odd) {
+        animation: parpadeo-h1 0.6s infinite;
+    }
+
+    h1 span:nth-child(even) {
+        animation: parpadeo-h1 1.2s infinite;
+    }
+
+    h1 span:nth-child(3n) {
+        animation: parpadeo-h1 0.8s infinite;
+    }
+
+    h1 span:nth-child(4n) {
+        animation: parpadeo-h1 1.35s infinite;
+    }
+
+
+    /* Línea separadora */
+    hr {
+        border: none;
+        height: 2px;
+        background-color: #000000;
+        margin: 20px 0;
+    }
+
+    /* Animación de parpadeo para h2 */
+    @keyframes parpadeo-h2 {
+
+        0%,
+        100% {
+            color: #fbfbfb;
+            /* Color inicial del h2 */
+        }
+
+        50% {
+            color: rgb(255, 0, 195);
+            /* Color amarillo al parpadear */
+        }
+    }
+
+    /* Estilo del h2 con parpadeo disparejo */
+    h2 {
+
+        font-size: 2em;
+        font-family: 'Arial', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-family: 'Press Start 2P', cursive;
+    }
+
+    h2 span:nth-child(odd) {
+        animation: parpadeo-h2 0.2s infinite;
+    }
+
+    h2 span:nth-child(even) {
+        animation: parpadeo-h2 0.3s infinite;
+    }
+
+    h2 span:nth-child(3n) {
+        animation: parpadeo-h2 0.2s infinite;
+    }
+
+    h2 span:nth-child(4n) {
+        animation: parpadeo-h2 0.1s infinite;
+    }
+
+    /* Estilos para las listas */
+    ul {
+        list-style-type: square;
+        padding-left: 20px;
+        font-family: 'Press Start 2P', cursive;
+    }
+
+    li {
+        margin-bottom: 10px;
+        font-size: 1.2em;
+        color: #ffffff;
+    }
+
+    /* Enlaces */
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Estilo general de los párrafos */
+    p {
+        position: relative;
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: #ffffff;
+        text-align: justify;
+        margin: 20px 0;
+        overflow: hidden;
+        font-family: 'Press Start 2P', cursive;
+        /* Para que el reflejo no se salga del área del párrafo */
+    }
+
+    /* Pseudo-elemento para el reflejo */
+    p::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        /* Inicia fuera del párrafo */
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+        transform: skewX(-25deg);
+        /* Inclina el reflejo */
+        opacity: 0;
+        /* Empieza invisible */
+        animation: reflejo 2.5s ease-in-out infinite;
+        /* Animación continua */
+    }
+
+    /* Animación del reflejo */
+    @keyframes reflejo {
+        0% {
+            left: -100%;
+            /* Empieza fuera del párrafo, a la izquierda */
+            opacity: 0;
+            /* Invisible al inicio */
+        }
+
+        10% {
+            opacity: 0.3;
+            /* Empieza a ser visible */
+        }
+
+        50% {
+            left: 100%;
+            /* Mueve el reflejo hacia la derecha */
+            opacity: 0.5;
+            /* Máxima visibilidad en el centro */
+        }
+
+        90% {
+            opacity: 0.3;
+            /* Empieza a desvanecerse */
+        }
+
+        100% {
+            left: 100%;
+            /* Sale fuera del párrafo a la derecha */
+            opacity: 0;
+            /* Invisible al final */
+        }
+    }
+
+
+    /* Efecto en enlaces de navegación */
+    ul li a {
+        display: block;
+        padding: 10px;
+        background-color: #000000;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    ul li a:hover {
+        background-color: #ff0000;
+    }
+
+    /* Estilo para las imágenes pequeñas que caen */
+    .falling-image {
+        position: absolute;
+        top: -100px;
+        /* Empieza fuera del área visible */
+        width: 50px;
+        /* Tamaño pequeño de las imágenes */
+        height: 50px;
+        opacity: 20;
+        animation: fall 5s linear infinite, fadeOut 5s linear infinite;
+    }
+
+    /* Animación de caída */
+    @keyframes fall {
+        0% {
+            top: -100px;
+        }
+
+        100% {
+            top: 200vh;
+            /* Cae hasta el fondo de la pantalla */
+        }
+    }
+
+    /* Animación de desvanecimiento */
+    @keyframes fadeOut {
+        0% {
+            opacity: 3;
+        }
+
+        80% {
+            opacity: 3;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
